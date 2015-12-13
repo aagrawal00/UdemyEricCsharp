@@ -33,6 +33,7 @@ namespace Section1to5
             Console.WriteLine("Method 15: DemonstrateAssignmentOperators");
             Console.WriteLine("Method 16: FlippingCoin");
             Console.WriteLine("Method 17: FlippingCoin2");
+            Console.WriteLine("Method 18: Guessing Game");
 
             switchcase = int.Parse(Console.ReadLine());
 
@@ -123,7 +124,12 @@ namespace Section1to5
                     FlippingCoin2();
                     ProgramEnd();
                     break;
-            }            
+                case 18:
+                    Console.Clear();
+                    GuessingGame();
+                    ProgramEnd();
+                    break;
+            }
         }
         /*Method 2, Lecture 3: Basic input and output*/
         static void HelloWorld()
@@ -267,7 +273,7 @@ namespace Section1to5
             Console.WriteLine();
             Console.WriteLine("Press 1 to go to the main menu, any other key to end the program");
             int input = int.Parse(Console.ReadLine());
-            if (input==1)
+            if (input == 1)
             {
                 Main();
             }
@@ -441,15 +447,15 @@ c:\mydirectory\subdirectory\filename.txt");
             string userGuess = Console.ReadLine();
             Random num = new Random();
             coin = num.Next(0, 2);
-            if (coin==0 && userGuess=="t")
+            if (coin == 0 && userGuess == "t")
             {
                 Console.WriteLine("You win, it's tails");
             }
-            else if (coin==1 && userGuess=="h")
+            else if (coin == 1 && userGuess == "h")
             {
                 Console.WriteLine("You win, it's heads");
             }
-            else if (coin==1)
+            else if (coin == 1)
             {
                 Console.WriteLine("You lose, it's heads");
             }
@@ -462,16 +468,16 @@ c:\mydirectory\subdirectory\filename.txt");
         static void FlippingCoin2()
         {
             int coin;
-            string coindescription="tails";
+            string coindescription = "tails";
             Random num = new Random();
             Console.WriteLine("Enter a choice, heads or tails <h or t>");
             string userGuess = Console.ReadLine();
             coin = num.Next(0, 2);
-            if (coin==1)
+            if (coin == 1)
             {
                 coindescription = "heads";
             }
-            if ((coin == 0 && userGuess == "t") || (coin==1 && userGuess == "h"))
+            if ((coin == 0 && userGuess == "t") || (coin == 1 && userGuess == "h"))
             {
                 Console.WriteLine("You win, it's a {0}", coindescription);
             }
@@ -480,8 +486,43 @@ c:\mydirectory\subdirectory\filename.txt");
                 Console.WriteLine("You lose, it's a {0}", coindescription);
             }
 
-            }
-        //Method 20: 
         }
+        //Method 20: Section 5: Lecture 16, The Guessing Game
+        static void GuessingGame()
+        {
+            int playerguess;
+            int theAnswer;
+            bool isnumbernotguessed = true;
+            string playerinput;
+
+            Random rng = new Random();
+            theAnswer = rng.Next(1, 10);
+
+            do
+            {
+                Console.WriteLine("Enter your guess");
+                playerinput = Console.ReadLine();
+                playerguess = int.Parse(playerinput);
+
+                if (playerguess == theAnswer)
+                {
+                    Console.WriteLine("You win!");
+                    isnumbernotguessed = false;
+                }
+                else
+                {
+                    if (playerguess < theAnswer)
+                    {
+                        Console.WriteLine("Too Small!");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Too Large");
+                    }
+                }
+            } while (isnumbernotguessed);
+        }
+        //Method 21: Section 
     }
+}
       
