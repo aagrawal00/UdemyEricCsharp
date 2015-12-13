@@ -36,6 +36,7 @@ namespace Section1to5
             Console.WriteLine("Method 18: Guessing Game");
             Console.WriteLine("Method 19: LuckySevens");
             Console.WriteLine("Method 20: Multiplication Table");
+            Console.WriteLine("Method 21: Enhance the Guessing Game");
 
             switchcase = int.Parse(Console.ReadLine());
 
@@ -139,6 +140,11 @@ namespace Section1to5
                 case 20:
                     Console.Clear();
                     MultiplicationTable();
+                    ProgramEnd();
+                    break;
+                case 21:
+                    Console.Clear();
+                    GuessingGameEnhance();
                     ProgramEnd();
                     break;
             }
@@ -573,6 +579,49 @@ c:\mydirectory\subdirectory\filename.txt");
                 Console.WriteLine();
             }
             Console.ReadLine();
+        }
+        //Method 23: Section 5: Lecture 21, Enhance the Guessing Game
+        static void GuessingGameEnhance()
+        {
+            int playerguess, numguess=0;
+            int theAnswer;
+            bool isnumbernotguessed = true;
+            string playerinput;
+
+            Random rng = new Random();
+            theAnswer = rng.Next(1, 21);
+
+            do
+            {
+                Console.WriteLine("Enter your guess");
+                playerinput = Console.ReadLine();
+                playerguess = int.Parse(playerinput);
+
+                if (playerguess < 21 && playerguess > 0)
+                {
+                    numguess += 1;
+                    if (playerguess == theAnswer)
+                    {
+                        Console.WriteLine("You win! The number of guesses you took is {0}", numguess);
+                        isnumbernotguessed = false;
+                    }
+                    else
+                    {
+                        if (playerguess < theAnswer)
+                        {
+                            Console.WriteLine("Too Small!");
+                        }
+                        else
+                        {
+                            Console.WriteLine("Too Large");
+                        }
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Your guess is outside the range. Please enter a number between 1 and 20");
+                }
+            } while (isnumbernotguessed);
         }
     }
 }
