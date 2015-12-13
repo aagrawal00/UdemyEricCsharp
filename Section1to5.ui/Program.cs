@@ -34,6 +34,8 @@ namespace Section1to5
             Console.WriteLine("Method 16: FlippingCoin");
             Console.WriteLine("Method 17: FlippingCoin2");
             Console.WriteLine("Method 18: Guessing Game");
+            Console.WriteLine("Method 19: LuckySevens");
+            Console.WriteLine("Method 20: Multiplication Table");
 
             switchcase = int.Parse(Console.ReadLine());
 
@@ -127,6 +129,16 @@ namespace Section1to5
                 case 18:
                     Console.Clear();
                     GuessingGame();
+                    ProgramEnd();
+                    break;
+                case 19:
+                    Console.Clear();
+                    LuckySevens();
+                    ProgramEnd();
+                    break;
+                case 20:
+                    Console.Clear();
+                    MultiplicationTable();
                     ProgramEnd();
                     break;
             }
@@ -522,7 +534,46 @@ c:\mydirectory\subdirectory\filename.txt");
                 }
             } while (isnumbernotguessed);
         }
-        //Method 21: Section 
+        //Method 21: Section 5: Lecture 19, Lucky Sevens
+        static void LuckySevens()
+        {
+            int dice1;
+            int dice2;
+            int i, sum, count=0;
+
+            Random rng = new Random();
+
+            for(i=0; i<100; i++)
+            {
+                dice1 = rng.Next(1, 7);
+                dice2 = rng.Next(1, 7);
+
+                sum = dice1 + dice2;
+
+                if (sum==7)
+                {
+                    count += 1;
+                }
+            }
+            Console.WriteLine("The total number of times the sum was 7 is {0}", count);
+        }
+        //Method 22: Section 5: Lecture 20, Multiplication Table
+        static void MultiplicationTable()
+        {
+            int i, j, mul;
+            Console.WriteLine("\t1\t2\t3\t4\t5\t6\t7\t8\t9");
+            for (i=1;i<=9;i++)
+            {
+                Console.Write(i);
+                for (j=1;j<=9;j++)
+                {
+                    mul = i * j;
+                    Console.Write("\t{0}", mul);
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
     }
 }
       
