@@ -1,6 +1,0 @@
-C:\Users\abhishekagrawal\Dropbox\Shaikshadink-Chaalu\C#\UdemyEricCsharp\Section1to5.ui\bin\Debug\Section1to5.exe.config
-C:\Users\abhishekagrawal\Dropbox\Shaikshadink-Chaalu\C#\UdemyEricCsharp\Section1to5.ui\bin\Debug\Section1to5.exe
-C:\Users\abhishekagrawal\Dropbox\Shaikshadink-Chaalu\C#\UdemyEricCsharp\Section1to5.ui\bin\Debug\Section1to5.pdb
-C:\Users\abhishekagrawal\Dropbox\Shaikshadink-Chaalu\C#\UdemyEricCsharp\Section1to5.ui\obj\Debug\Section1to5.exe
-C:\Users\abhishekagrawal\Dropbox\Shaikshadink-Chaalu\C#\UdemyEricCsharp\Section1to5.ui\obj\Debug\Section1to5.pdb
-C:\Users\abhishekagrawal\Dropbox\Shaikshadink-Chaalu\C#\UdemyEricCsharp\Section1to5.ui\obj\Debug\Section1to5.ui.csprojResolveAssemblyReference.cache

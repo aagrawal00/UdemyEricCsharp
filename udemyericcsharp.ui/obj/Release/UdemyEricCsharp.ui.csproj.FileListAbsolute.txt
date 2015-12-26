@@ -1,0 +1,6 @@
+C:\Users\agrawala\Downloads\Makino Training\C#\UdemyEricCsharp\UdemyEricCsharp.ui\bin\Release\UdemyEricCsharp.exe.config
+C:\Users\agrawala\Downloads\Makino Training\C#\UdemyEricCsharp\UdemyEricCsharp.ui\bin\Release\UdemyEricCsharp.exe
+C:\Users\agrawala\Downloads\Makino Training\C#\UdemyEricCsharp\UdemyEricCsharp.ui\bin\Release\UdemyEricCsharp.pdb
+C:\Users\agrawala\Downloads\Makino Training\C#\UdemyEricCsharp\UdemyEricCsharp.ui\obj\Release\UdemyEricCsharp.exe
+C:\Users\agrawala\Downloads\Makino Training\C#\UdemyEricCsharp\UdemyEricCsharp.ui\obj\Release\UdemyEricCsharp.pdb
+C:\Users\agrawala\Downloads\Makino Training\C#\UdemyEricCsharp\UdemyEricCsharp.ui\obj\Release\UdemyEricCsharp.ui.csprojResolveAssemblyReference.cache
