@@ -4,6 +4,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Configuration;
+using System.IO;
+using UdemyEricCsharp.Containers;
+using UdemyEricCsharp.Items;
 
 namespace UdemyEricCsharp
 {
@@ -40,11 +44,24 @@ namespace UdemyEricCsharp
             Console.WriteLine("Method 23: Stopwatch");
             Console.WriteLine("Method 24: ParametersandReturnValues");
             Console.WriteLine("Method 25: Rock Paper Scissors Game");
+            Console.WriteLine("Method 26: Arrays in C Sharp");
+            Console.WriteLine("Method 27: Fun With Strings");
+            Console.WriteLine("Method 28: Hangman");
+            Console.WriteLine("Method 29: Logging Polymorphic Interface");
+            Console.WriteLine("Method 30: RPG Bag System");
+
+            string message = ConfigurationManager.AppSettings["Message"];
+
+            Console.WriteLine("\nThe message is: {0}", message);
+
+            Console.Write(new string('\n', 3));
+            Console.WriteLine("Enter 0 to exit this console application");
 
             int switchcase = int.Parse(Console.ReadLine());
 
             switch (switchcase)
             {
+                case 0: break;
                 case 1:
                     Console.Clear();
                     HelloWorld();
@@ -168,6 +185,31 @@ namespace UdemyEricCsharp
                 case 25:
                     Console.Clear();
                     RockPapersScissorsGame();
+                    ProgramEnd();
+                    break;
+                case 26:
+                    Console.Clear();
+                    ArraysinCsharp();
+                    ProgramEnd();
+                    break;
+                case 27:
+                    Console.Clear();
+                    Funwithstrings();
+                    ProgramEnd();
+                    break;
+                case 28:
+                    Console.Clear();
+                    Hangman();
+                    ProgramEnd();
+                    break;
+                case 29:
+                    Console.Clear();
+                    LoggingPolymorphicInterface();
+                    ProgramEnd();
+                    break;
+                case 30:
+                    Console.Clear();
+                    RPGBagSystem();
                     ProgramEnd();
                     break;
             }
@@ -314,14 +356,14 @@ namespace UdemyEricCsharp
             Console.WriteLine();
             Console.WriteLine("Press any key to go to the main menu, 0 to end the program");
             var input = Console.ReadLine();
-            while(true)
+            while (true)
+            {
+                if (input == "0")
                 {
-                    if (input=="0")
-                    {
-                        return;
-                    }
-                    Main();
+                    return;
                 }
+                Main();
+            }
         }
         /*Method 12: Lecture 10: Expressions and Operators*/
         static void DemonstrateLiterals()
@@ -568,18 +610,18 @@ c:\mydirectory\subdirectory\filename.txt");
         {
             int dice1;
             int dice2;
-            int i, sum, count=0;
+            int i, sum, count = 0;
 
             Random rng = new Random();
 
-            for(i=0; i<100; i++)
+            for (i = 0; i < 100; i++)
             {
                 dice1 = rng.Next(1, 7);
                 dice2 = rng.Next(1, 7);
 
                 sum = dice1 + dice2;
 
-                if (sum==7)
+                if (sum == 7)
                 {
                     count += 1;
                 }
@@ -591,10 +633,10 @@ c:\mydirectory\subdirectory\filename.txt");
         {
             int i, j, mul;
             Console.WriteLine("\t1\t2\t3\t4\t5\t6\t7\t8\t9");
-            for (i=1;i<=9;i++)
+            for (i = 1; i <= 9; i++)
             {
                 Console.Write(i);
-                for (j=1;j<=9;j++)
+                for (j = 1; j <= 9; j++)
                 {
                     mul = i * j;
                     Console.Write("\t{0}", mul);
@@ -606,7 +648,7 @@ c:\mydirectory\subdirectory\filename.txt");
         //Method 23: Section 5: Lecture 21, Enhance the Guessing Game
         static void GuessingGameEnhance()
         {
-            int playerguess, numguess=0;
+            int playerguess, numguess = 0;
             int theAnswer;
             bool isnumbernotguessed = true;
             string playerinput;
@@ -672,7 +714,7 @@ c:\mydirectory\subdirectory\filename.txt");
             SimpleCalculator obj = new SimpleCalculator();
             Console.WriteLine("Do you want to add, square or find maximum of three numbers?");
             string ans = Console.ReadLine();
-            if (ans=="add")
+            if (ans == "add")
             {
                 Console.WriteLine("Enter the two numbers you want to add");
                 a = int.Parse(Console.ReadLine());
@@ -680,20 +722,20 @@ c:\mydirectory\subdirectory\filename.txt");
                 Console.WriteLine(obj.Add(a, b));
                 Console.ReadLine();
             }
-            else if (ans=="square")
+            else if (ans == "square")
             {
                 Console.WriteLine("Enter the number you wish to take the square of");
                 a = int.Parse(Console.ReadLine());
                 Console.WriteLine(obj.Square(a));
                 Console.ReadLine();
             }
-            else if (ans=="maximum")
+            else if (ans == "maximum")
             {
                 Console.WriteLine("Enter the three numbers");
                 a = int.Parse(Console.ReadLine());
                 b = int.Parse(Console.ReadLine());
                 c = int.Parse(Console.ReadLine());
-                Console.WriteLine(obj.Maxthree(a,b,c));
+                Console.WriteLine(obj.Maxthree(a, b, c));
                 Console.ReadLine();
             }
         }
@@ -703,6 +745,92 @@ c:\mydirectory\subdirectory\filename.txt");
             RockPaperScissors obj = new RockPaperScissors();
             obj.Play();
         }
+        //Method 28: Section 7: Lecture 33: Demo: Creating and Manipulating Arrays
+        static void ArraysinCsharp()
+        {
+            ArraysinCsharp obj = new ArraysinCsharp();
+            obj.SingleDimensionArrayCreation();
+            obj.AutoInitializingArrays();
+            obj.ArraysAndMethods();
+            obj.ArrayClassMethods();
+            obj.ForEach();
+        }
+        //Method 29: Section 7: Lecture 35: Fun with Strings
+        static void Funwithstrings()
+        {
+            Funwithstrings obj = new Funwithstrings();
+            obj.StringsAreImmutable();
+            obj.ComparingStrings();
+            obj.StringsHaveLengthAndIndexes();
+            obj.CasingAndWhiteSpace();
+            obj.UsefulCharacterMethods();
+            obj.EditingStrings();
+            obj.SplitAndJoin();
+        }
+        //Method 30: Section 7: Live Coding: Hangman
+        static void Hangman()
+        {
+            Hangman obj = new Hangman();
+            obj.Play();
+        }
+        //Method 31: Section 8: Polymorphic Interface
+        static void LoggingPolymorphicInterface()
+        {
+            ILogger log = ILoggerFactory.GetLogger();
+            log.WriteToLog("Hello World");
+            Console.ReadLine();
+        }
+        //Method 32: RPG Bag
+        static void RPGBagSystem()
+        {
+            //BagTest();
+            //SackTest();
+            RemoveTest();
+            Console.ReadLine();
+        }
+        //Method 33: RPG Bag 
+        private static void RemoveTest()
+        {
+            Bag myBag = new Bag(3);
+
+            var Item1 = new Sword();
+            var Item2 = new Potion();
+            var Item3 = new Sword();
+
+            myBag.AddItem(Item1);
+            myBag.AddItem(Item2);
+            myBag.AddItem(Item3);
+
+            myBag.DisplayContents();
+
+            var removed = myBag.RemoveItem();
+            Console.WriteLine("Removed a {0}", removed.Name);
+
+            myBag.DisplayContents();
+        }
+        private static void BagTest()
+        {
+            Bag myBag = new Bag(3);
+
+            var Item1 = new Sword();
+            var Item2 = new Potion();
+
+            myBag.AddItem(Item1);
+            myBag.AddItem(Item2);
+
+            myBag.DisplayContents();
+        }
+        private static void SackTest()
+        {
+            Sack sack = new Sack(4);
+
+            var item1 = new Sword();
+            var item2 = new Potion();
+
+            sack.AddItem(item1);
+            sack.AddItem(item2);
+
+            sack.DisplayContents();
+        }
     }
 }
-      

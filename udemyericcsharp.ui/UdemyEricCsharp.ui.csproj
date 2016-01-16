@@ -45,6 +45,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -53,6 +54,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ArraysinCsharp.cs" />
+    <Compile Include="ConsoleLogger.cs" />
+    <Compile Include="Containers\Bag.cs" />
+    <Compile Include="Containers\Sack.cs" />
+    <Compile Include="FileLogger.cs" />
+    <Compile Include="Funwithstrings.cs" />
+    <Compile Include="Hangman.cs" />
+    <Compile Include="ILogger.cs" />
+    <Compile Include="ILoggerFactory.cs" />
+    <Compile Include="Items\Item.cs" />
+    <Compile Include="Items\Potion.cs" />
+    <Compile Include="Items\Sword.cs" />
     <Compile Include="Messenger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
